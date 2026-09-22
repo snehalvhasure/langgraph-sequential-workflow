@@ -189,15 +189,7 @@ The current implementation does not explicitly handle errors such as API failure
 **Possible improvement:**
 Add exception handling and appropriate error messages so that the application can handle failures gracefully.
 
-### 4. No Validation of the Generated Output
-
-**Limitation:**
-The application requests a 10-line poem, but the code does not verify that the model actually returned exactly 10 lines.
-
-**Possible improvement:**
-Add output validation after poem generation and retry or correct the output if it does not satisfy the required format.
-
-### 5. Multiple LLM Calls Increase Cost and Latency
+### 4. Multiple LLM Calls Increase Cost and Latency
 
 **Limitation:**
 The workflow makes one LLM call to generate the poem and another LLM call to summarize it. Therefore, both API usage and response time can increase.
@@ -205,7 +197,7 @@ The workflow makes one LLM call to generate the poem and another LLM call to sum
 **Possible improvement:**
 Use an appropriate model, optimize prompts, or combine operations when the application requirements allow it.
 
-### 6. No User Interface
+### 5. No User Interface
 
 **Limitation:**
 The current application runs from a Python script and does not provide a graphical or web-based interface.
@@ -213,7 +205,7 @@ The current application runs from a Python script and does not provide a graphic
 **Possible improvement:**
 Create a user interface using technologies such as Streamlit, Flask, or FastAPI.
 
-### 7. Limited Workflow
+### 6. Limited Workflow
 
 **Limitation:**
 The current graph contains only two sequential nodes:
